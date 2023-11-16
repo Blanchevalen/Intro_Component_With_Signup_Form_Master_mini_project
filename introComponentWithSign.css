@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass&family=Poppins&display=swap');
+:root{
+    /*widths*/
+    --wd-mobil:375px;
+    --wd-dekstop:1440px;
+    /*colors*/
+    --clr-primary-red: hsl(0, 100%, 74%) ;
+    --clr-primary-green: hsl(154, 59%, 51%);
+    --clr-accent-blue: hsl(248, 32%, 49%);
+    --clr-neutral-dark-blue: hsl(249, 10%, 26%);
+    --clr-grayish-blue: hsl(246, 25%, 77%);
+    /*font*/
+    --font-size: 1rem; /*16px*/
+    --font-family:'Poppins', sans-serif;
+/*Weights: 400, 500, 600, 700*/
+}
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: content-box;
+}
+html{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+body{
+    display: grid;
+    background-image: url("./images/bg-intro-desktop.png");
+    background-color: var(--clr-primary-red);
+    
+    grid-template-columns: 50% 50%;
+    grid-auto-rows: auto;
+    grid-template-areas: "text form";
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+    color:white;
+    justify-content: space-around;
+    align-items: center;
+    padding:1rem 8rem 1rem 8rem;
+    
+}
+/*Section-text*/
+#text{
+
+    grid-area: text;
+    
+    display: grid;
+    justify-content: space-around;
+    align-items: center;
+    /*max-width: 500px;*/
+    
+ 
+    margin-right: 2rem;
+    
+}
+h1{
+    font-weight: 700;
+    font-size: 3.5rem;
+    padding:8rem 0rem 3rem 0rem;
+    line-height: 120%;
+}
+/*Section-form*/
+#form{
+    display: grid;
+    grid-area: form;
+   /* display: grid;
+     max-width: 500px;
+    justify-content: center;*/
+    align-items: center;
+    margin-left: 2rem;
+}
+
+form{background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0px 14px 19px var(--clr-neutral-dark-blue);
+    display: grid;
+    row-gap: 1rem;
+    padding: 3rem;
+    /*width: fit-content; elem tartalmának méretéhez igazodik, nem tölti ki a keretet*/
+  /*width:500px*/
+    /*grid-column: span;*/
+}
+
+#free-offer{
+    background-color: var(--clr-accent-blue);
+    color:white;
+    text-align: center;
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+    border-radius: 1rem;
+    padding: 1rem 0rem 1rem 0rem;
+    box-shadow: 0px 14px 19px var(--clr-neutral-dark-blue);
+    margin-bottom: 2rem;
+    margin-top:7rem;
+}
+#bold{
+    font-weight: 600;
+}
+#form-text{
+    color:var(--clr-grayish-blue);
+    font-size: 0.70rem;
+    text-align: center;
+}
+#form-text2{
+    color:var(--clr-primary-red);
+}
+
+input{display: block;
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+    font-weight: 600;
+padding: 1rem 1rem 1rem 1rem;
+border-radius: 0.5rem;
+border-color: var(--clr-grayish-blue);
+border-width: 1px;}
+
+#input1:hover,#input2:hover,#input3:hover,#input4:hover {
+    border-color: var(--clr-neutral-dark-blue);
+    border-width: 2px;
+    color:black;
+}
+
+#submit{
+    background-color: var(--clr-primary-green);
+    color:white;
+    text-transform: uppercase;
+}
+
+
+footer{
+    display: none;
+}
+@media (max-width:376px){
+   
+   html{
+    display: grid;
+    align-content: center;
+   }
+    body{ 
+        background-image: url(./images/bg-intro-mobile.png);
+        display: grid;
+        grid-template-columns: 100%;
+        grid-auto-rows:auto;
+        grid-template-areas: "text" 'form';
+        padding:2rem; 
+    
+ }
+h1{
+    font-size: 2rem;
+    text-align: center;
+    padding: 2rem 0rem 1rem 0rem;
+}
+
+#text-text{
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+#form-text{
+    text-align: center;
+    padding-bottom:2rem;
+    font-size:0.75rem;
+}
+#free-offer{
+    margin:2rem 0rem 2rem 0rem;
+    padding:1rem 4rem 1rem 4rem;
+    font-size:0.75rem;
+}
+#form{
+    margin-left: 0;
+    font-size:0.7rem;
+ 
+}
+form{
+    padding:1rem;
+}
+input{
+    font-size:0.75rem;
+}
+#text{
+    margin-right: 0;
+}
+
+
+}
+
+/* Acction*/
+#error1,#error2,#error3,#error4{
+    display: none;
+    color:var(--clr-primary-red);
+    text-align: right;
+    font-style: italic;
+    font-size:0.7rem;
+    padding-bottom: 0;
+}
+
+.hiddenPlaceholder::placeholder{
+    color:transparent;
+
+}
+
+#errorIcon1{
+    position:relative;
+    z-index: 2;
+    top: 240%;
+    right:-90%;
+    display:none;
+    
+}
+#errorIcon2{
+    position:relative;
+    z-index: 2;
+    top: 240%;
+    right:-90%;
+    display:none;
+}
+#errorIcon3{
+    position:relative;
+    z-index: 2;
+    top: 240%;
+    right:-90%;
+    display:none;
+}
+#errorIcon4{
+    position:relative;
+    z-index: 2;
+    top: 240%;
+    right:-90%;
+    display:none;
+}
+
+.emailPlaceholderChange::placeholder{
+color:var(--clr-primary-red);
+}
